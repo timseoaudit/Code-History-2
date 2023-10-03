@@ -14,12 +14,12 @@ struct ContentView: View {
     possibleAnswers: ["Ant", "Beetle", "Moth", "Fly"],
     correctAnswerIndex: 2)
     
-    let mainColor = Color(red: 20/255, green: 28/255, blue: 58/255)
+   @State var mainColor = Color(red: 20/255, green: 28/255, blue: 58/255)
     
     var body: some View {
         
         ZStack{
-            mainColor.ignoresSafeArea()
+            mainColor.ignoresSafeArea() //why does it not work ? should Cover whole Display.
             VStack{
                 Text("1/10")
                     .font(.callout)
@@ -35,6 +35,7 @@ struct ContentView: View {
                         answerIndex in
                         Button(action: {
                             print("Tapped on option with the text: \(question.possibleAnswers[answerIndex])")
+                            mainColor = answerIndex == question.correctAnswerIndex ? .green : .red
                           }, label: {
                             ChoiceTextView(choiceText: question.possibleAnswers[answerIndex])
                           })
