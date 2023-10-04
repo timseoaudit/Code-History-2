@@ -47,10 +47,18 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		CEABBD8F2ACCF22700EEEDED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE2FB75A2ACBCFC300D82B50 /* ChoiceTextView.swift */,
+				CEC10E802ACA41FA001C07CC /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CEC10E722ACA41FA001C07CC = {
 			isa = PBXGroup;
 			children = (
-				CEABBD8E2ACCF1C100EEEDED /* Models */,
 				CEC10E7D2ACA41FA001C07CC /* Code History */,
 				CEC10E7C2ACA41FA001C07CC /* Products */,
 			);
@@ -67,9 +75,9 @@
 		CEC10E7D2ACA41FA001C07CC /* Code History */ = {
 			isa = PBXGroup;
 			children = (
+				CEABBD8E2ACCF1C100EEEDED /* Models */,
+				CEABBD8F2ACCF22700EEEDED /* Views */,
 				CEC10E7E2ACA41FA001C07CC /* Code_HistoryApp.swift */,
-				CEC10E802ACA41FA001C07CC /* ContentView.swift */,
-				CE2FB75A2ACBCFC300D82B50 /* ChoiceTextView.swift */,
 				CEC10E822ACA41FF001C07CC /* Assets.xcassets */,
 				CEC10E842ACA41FF001C07CC /* Preview Content */,
 			);
