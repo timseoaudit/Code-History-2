@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct GameView: View {
     
     let question = Question(
     questionText: "What was the first computer bug?",
     possibleAnswers: ["Ant", "Beetle", "Moth", "Fly"],
     correctAnswerIndex: 2)
     
-   @State var mainColor = Color(red: 20/255, green: 28/255, blue: 58/255)
-    let accentColor = Color(red: 48/255, green: 105/255, blue: 240/255)
+    @State var mainColor = GameColor.main
+
     
     var body: some View {
         
@@ -32,11 +32,11 @@ struct ContentView: View {
                     .multilineTextAlignment(.leading)
                 Spacer()
                 HStack{
-                    ForEach(0..<question.possibleAnswers.count) {
+                    ForEach(0 ..< question.possibleAnswers.count) {
                         answerIndex in
                         Button(action: {
                             print("Tapped on option with the text: \(question.possibleAnswers[answerIndex])")
-                            mainColor = answerIndex == question.correctAnswerIndex ? .green : .red
+                            mainColor = answerIndex == question.correctAnswerIndex ? GameColor.correctGuess : GameColor.incorrectGuess
                           }, label: {
                             ChoiceTextView(choiceText: question.possibleAnswers[answerIndex])
                           })
@@ -52,6 +52,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        GameView()
     }
 }
