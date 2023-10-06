@@ -26,7 +26,9 @@ struct QuestionView: View {
                         print("Tapped on option with the text: \(question.possibleAnswers[index])")
                     } label: {
                         ChoiceTextView(choiceText: question.possibleAnswers[index])
+                            .background(viewModel.color(forOptionIndex: index))
                     }
+                    .disabled(viewModel.guessWasMade)
                 }
                     }
             if viewModel.guessWasMade {
