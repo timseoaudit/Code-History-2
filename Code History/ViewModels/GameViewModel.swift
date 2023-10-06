@@ -5,7 +5,7 @@
 //  Created by user on 06/10/2023.
 //
 
-import Foundation
+
 import SwiftUI
 
 class GameViewModel: ObservableObject {

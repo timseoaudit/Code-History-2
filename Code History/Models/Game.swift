@@ -10,11 +10,13 @@ import Foundation
 struct Game {
     //privite declarations
     private(set) var guesses = [Question: Int]()
-    private let questions = Question.allQuestions.shuffled()
     private(set) var currentQuestionIndex = 0
     private(set) var isOver = false
     
     //Internal declarations
+    private let questions = Question.allQuestions.shuffled()
+    
+    
     var numberOfQuestions: Int {
         questions.count
     }

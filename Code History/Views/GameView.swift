@@ -13,10 +13,9 @@ struct GameView: View {
 
     
     var body: some View {
-    
-        ZStack{
+        ZStack {
             GameColor.main.ignoresSafeArea()
-                VStack{
+            VStack {
                     Text(viewModel.questionProgessText)
                         .font(.callout)
                         .multilineTextAlignment(.leading)

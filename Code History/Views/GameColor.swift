@@ -5,7 +5,6 @@
 //  Created by user on 05/10/2023.
 //
 
-import Foundation
 import SwiftUI
 
 struct GameColor {
