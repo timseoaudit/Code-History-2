@@ -13,23 +13,22 @@ struct GameView: View {
 
     
     var body: some View {
+    
         ZStack{
-            GameColor.main.ignoresSafeArea() //why does it not work ? should Cover whole Display.
-            VStack{
-                Text(viewModel.questionProgessText)
-                    .font(.callout)
-                    .multilineTextAlignment(.leading)
-                    .padding()
-                QuestionView(question: viewModel.currentQuestion)
-  
+            GameColor.main.ignoresSafeArea()
+                VStack{
+                    Text(viewModel.questionProgessText)
+                        .font(.callout)
+                        .multilineTextAlignment(.leading)
+                        .padding()
+                    QuestionView(question: viewModel.currentQuestion)
             }
         }
         .foregroundColor(.white)
-            .padding()
-        
+        .padding()
         .environmentObject(viewModel)
-        }
     }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
