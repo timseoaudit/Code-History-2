@@ -28,10 +28,10 @@ struct QuestionView: View {
                         ChoiceTextView(choiceText: question.possibleAnswers[index])
                     }
                 }
-                if viewModel.guessWasMade {
-                    Button(action: {viewModel.displayNextScreen() }) {
-                        BottomTextView(str: "Next")
                     }
+            if viewModel.guessWasMade {
+                Button(action: {viewModel.displayNextScreen() }) {
+                    BottomTextView(str: "Next")
                 }
             }
         }
