@@ -26,6 +26,8 @@ struct GameView: View {
         }
         .foregroundColor(.white)
             .padding()
+        
+        .environmentObject(viewModel)
         }
     }
 
