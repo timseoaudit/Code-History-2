@@ -22,6 +22,7 @@ class GameViewModel: ObservableObject {
     
     var currentQuestion: Question {
         game.currentQuestion
+        
     }
     
     var questionProgessText: String {

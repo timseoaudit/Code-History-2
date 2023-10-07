@@ -14,6 +14,7 @@ struct ChoiceTextView: View {
     
     var body: some View {
         Text(choiceText)
+            .frame(maxWidth: .infinity)
             .font(.body)
             .bold()
             .multilineTextAlignment(.center)
