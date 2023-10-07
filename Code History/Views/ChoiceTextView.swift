@@ -19,6 +19,8 @@ struct ChoiceTextView: View {
             .multilineTextAlignment(.center)
             .padding()
             .border(GameColor.accent, width: 4)
+        
+//closing Tags for View
     }
 }
 

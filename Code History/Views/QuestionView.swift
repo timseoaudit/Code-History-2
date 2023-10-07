@@ -36,6 +36,7 @@ struct QuestionView: View {
                     BottomTextView(str: "Next")
                 }
             }
+//closing Tags for View 
         }
     }
     

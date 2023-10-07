@@ -33,6 +33,7 @@ struct WelcomeView: View {
                     .foregroundColor(.white)
                 }
             }
+//closing Tags for View
         }
     }
 

@@ -13,5 +13,7 @@ struct Code_HistoryApp: App {
         WindowGroup {
             WelcomeView()
         }
+        
+//closing Tags for View
     }
 }

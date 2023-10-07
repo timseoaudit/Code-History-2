@@ -12,6 +12,14 @@ class GameViewModel: ObservableObject {
     
     @Published private var game = Game()
     
+    var correctGuesses: Int {
+      game.guessCount.correct
+    }
+      
+    var incorrectGuesses: Int {
+      game.guessCount.incorrect
+    }
+    
     var currentQuestion: Question {
         game.currentQuestion
     }
@@ -26,6 +34,10 @@ class GameViewModel: ObservableObject {
         }else {
             return false
         }
+    }
+    
+    var gameisOver: Bool {
+        game.isOver
     }
     
     func makeGuess(atIndex index: Int) {

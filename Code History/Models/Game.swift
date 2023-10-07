@@ -25,7 +25,7 @@ struct Game {
         questions[currentQuestionIndex]
     }
     
-    var guessCount: (correct: Int, incorrect:Int){
+     var guessCount: (correct: Int, incorrect:Int){
         var count: (correct: Int, incorrect: Int) = (0, 0)
         for (question, guessedIndex) in guesses {
             if question.correctAnswerIndex == guessedIndex {
@@ -49,4 +49,5 @@ struct Game {
             isOver = true
         }
     }
+//closing Tags for View
 }
